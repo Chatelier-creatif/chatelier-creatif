@@ -13,7 +13,7 @@
 }
 
 .top-bar .logo img {
-  max-height: 50px;
+  max-height: 70px; /* logo plus grand */
 }
 
 .top-bar .social-icons a {
@@ -22,13 +22,13 @@
 }
 
 .top-bar .social-icons img {
-  height: 28px;
-  width: 28px;
+  height: 36px;  /* icônes plus visibles */
+  width: 36px;
   transition: transform 0.3s;
 }
 
 .top-bar .social-icons img:hover {
-  transform: scale(1.2);
+  transform: scale(1.3); /* un peu plus de zoom au survol */
 }
 /* -----------------------
    Base & Reset

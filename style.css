@@ -103,9 +103,9 @@ a {
   color: #c97c5d; /* terracotta */
 }
 
-/* Dropdown */
+/* Dropdown corrigé */
 .dropdown-menu {
-  display: none;
+  display: none;  /* par défaut caché */
   position: absolute;
   top: 35px;
   left: 0;
@@ -130,8 +130,8 @@ a {
   color: #c97c5d;
 }
 
-/* Afficher le menu au hover */
-.dropdown:hover .dropdown-menu {
+/* Afficher le menu uniquement au hover du parent */
+.main-nav ul li.dropdown:hover > .dropdown-menu {
   display: block;
 }
 

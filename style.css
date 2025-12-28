@@ -73,6 +73,83 @@ a {
 }
 
 /* -----------------------
+   Menu principal
+----------------------- */
+.main-nav {
+  background-color: #efe9e1; /* beige clair pour le menu */
+  padding: 10px 5%;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav ul li {
+  position: relative;
+}
+
+.main-nav ul li a {
+  color: #3b3b3b;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+  color: #c97c5d; /* terracotta */
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #f9f6f2;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  min-width: 180px;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+  color: #3b3b3b;
+  font-weight: normal;
+}
+
+.dropdown-menu li a:hover {
+  color: #c97c5d;
+}
+
+/* Afficher le menu au hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 20px;
+  }
+}
+
+/* -----------------------
    HERO
 ----------------------- */
 .hero {

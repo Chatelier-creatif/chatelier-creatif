@@ -109,7 +109,7 @@ h3 {
 }
 
 .top-bar .logo img {
-  max-height: 52px;
+  max-height: 70px;
   border-radius: 50%;
 }
 
@@ -120,8 +120,8 @@ h3 {
 }
 
 .social-icons img {
-  width: 28px;
-  height: 28px;
+  width: 35px;
+  height: 35px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 

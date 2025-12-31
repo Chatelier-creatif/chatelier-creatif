@@ -197,3 +197,18 @@ h1, h2, h3 {
   opacity: 1;
   transform: translate(0);
 }
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 8px 5%;
+  }
+
+  .top-bar .logo img {
+    max-height: 46px;
+  }
+
+  .social-icons img {
+    width: 26px;
+    height: 26px;
+  }
+}

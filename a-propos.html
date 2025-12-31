@@ -13,12 +13,10 @@
 
   <!-- Bandeau supérieur -->
   <div class="top-bar">
-    <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo_rond.png" alt="Le Cha'Telier Créatif" />
-        </a>
-      </div>
+    <div class="container top-bar-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo_rond.png" alt="Le Cha'Telier Créatif" />
+      </a>
       <div class="social-icons">
         <a href="https://www.instagram.com/chatelier.creatif/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
         <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
@@ -28,85 +26,79 @@
     </div>
   </div>
 
-<!-- Menu de navigation (optionnel pour cohérence) -->
+  <!-- Menu de navigation -->
   <nav class="main-nav">
-    <ul class="nav-list">
+    <ul class="nav-list container">
       <li><a href="index.html">Accueil</a></li>
       <li class="dropdown">
         <a href="creations.html">Mes créations ▾</a>
         <ul class="dropdown-menu">
-        <li><a href="gnome.html">Gnomes personnalisés</a></li>
-        <li><a href="box.html">Box personnalisées</a></li>
-        <li><a href="banderole.html">Banderoles personnalisées</a></li>
-        <li><a href="pochon.html">Pochons personnalisés</a></li>
-      </ul>
-    </li>
-      <li><a href="a-propos.html">À propos du Cha'Telier</a></li>
+          <li><a href="gnome.html">Gnomes personnalisés</a></li>
+          <li><a href="box.html">Box personnalisées</a></li>
+          <li><a href="banderole.html">Banderoles personnalisées</a></li>
+          <li><a href="pochon.html">Pochons personnalisés</a></li>
+        </ul>
+      </li>
+      <li><a href="a-propos.html" class="active">À propos</a></li>
       <li><a href="me-contacter.html">Me contacter</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-content">
+    <div class="container hero-content">
       <h1>Bienvenue dans le Cha'Telier Créatif</h1>
       <p>Un atelier artisanal où chaque création est pensée avec le cœur.</p>
     </div>
   </header>
 
   <!-- SECTION PRINCIPALE -->
-  <section class="section">
-    <div class="grid">
+  <section class="section container">
+    <div class="grid two-columns">
 
       <!-- Photo -->
-      <div>
-        <img
-          src="images/atelier.png"
-          alt="Créatrice du Cha'Telier Créatif"
-          style="width:100%; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.1);"
-        >
+      <div class="about-image">
+        <img src="images/atelier.png" alt="Créatrice du Cha'Telier Créatif">
       </div>
 
       <!-- Texte -->
-      <div>
+      <div class="about-text">
         <h2>Derrière Le Cha'Telier Créatif, un atelier artisanal fait main en France</h2>
 
-       <p>
-        Le <strong>Cha'Telier Créatif</strong> est un atelier de <strong>créations artisanales personnalisées</strong>,
-        spécialisé dans le fait main en France. Chaque création est imaginée et réalisée avec soin,
-        dans une démarche authentique, humaine et créative.
-       </p>
+        <p>
+          Le <strong>Cha'Telier Créatif</strong> est un atelier de <strong>créations artisanales personnalisées</strong>,
+          spécialisé dans le fait main en France. Chaque création est imaginée et réalisée avec soin,
+          dans une démarche authentique, humaine et créative.
+        </p>
 
-       <p>
-        Gnomes décoratifs, box personnalisées, banderoles ou pochons textiles :
-        chaque pièce est conçue sur mesure, selon vos envies, pour célébrer les moments
-        importants de la vie comme un anniversaire, une naissance, une fête ou un cadeau unique.
-       </p>
+        <p>
+          Gnomes décoratifs, box personnalisées, banderoles ou pochons textiles :
+          chaque pièce est conçue sur mesure, selon vos envies, pour célébrer les moments
+          importants de la vie comme un anniversaire, une naissance, une fête ou un cadeau unique.
+        </p>
 
-       <p>
-        Ici, il n’y a pas de production standardisée. Chaque création artisanale est pensée
-        comme une pièce unique, réalisée avec attention, patience et passion, afin d’offrir
-        un objet personnalisé qui a du sens et qui crée une véritable émotion.
-       </p>
+        <p>
+          Ici, il n’y a pas de production standardisée. Chaque création artisanale est pensée
+          comme une pièce unique, réalisée avec attention, patience et passion, afin d’offrir
+          un objet personnalisé qui a du sens et qui crée une véritable émotion.
+        </p>
 
         <h3>Mes valeurs</h3>
-        <ul>
+        <ul class="values-list">
           <li>✔ Fait main avec amour</li>
           <li>✔ Création artisanale française</li>
           <li>✔ Personnalisation sur mesure</li>
           <li>✔ Écoute et bienveillance</li>
         </ul>
 
-        <a href="creations.html" class="btn">
-          Découvrir mes créations
-        </a>
+        <a href="creations.html" class="btn btn-primary">Découvrir mes créations</a>
       </div>
 
     </div>
   </section>
 
   <!-- SECTION ENGAGEMENT -->
-  <section class="section alt">
+  <section class="section alt container">
     <h2>Pourquoi choisir une création artisanale ?</h2>
     <p class="intro">
       Acheter une création faite main, c’est soutenir un savoir-faire, une passion
@@ -115,21 +107,19 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta">
+  <section class="cta container">
     <h2>Une idée, une envie, un projet ?</h2>
     <p>
       N’hésitez pas à me contacter pour discuter de votre future création personnalisée.
     </p>
-    <a href="index.html#contact" class="btn">
-      Me contacter
-    </a>
+    <a href="me-contacter.html" class="btn btn-primary">Me contacter</a>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>
-      © Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.
-    </p>
+  <footer class="footer">
+    <div class="container">
+      <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
+    </div>
   </footer>
 
 </body>

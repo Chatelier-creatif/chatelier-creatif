@@ -300,8 +300,22 @@ h3 {
 }
 
 .process-item img {
-  width: 80px;
-  margin: 0 auto 20px;
+  width: 120px;          
+  height: auto;
+  margin: 0 auto 25px;
+  display: block;
+}
+
+.process-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  text-align: center;    /* ⬅️ explicite */
+}
+
+.process-item p {
+  max-width: 260px;
+  margin: 0 auto;
+  color: #666;
 }
 
 /* =================================================

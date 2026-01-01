@@ -394,43 +394,51 @@ footer {
   }
 }
 
-/* =================================================
-   CARROUSEL PRODUIT
-================================================= */
-.carousel {
-  position: relative;
-  overflow: hidden;
-  max-width: 420px;
-  margin: 0 auto;
-}
+/* ----- CARROUSEL PRODUIT ----- */
 
-.carousel-track {
+.product-detail {
   display: flex;
-  transition: transform 0.6s ease;
+  gap: 40px;
+  align-items: center;
 }
 
-.carousel-track img,
-.carousel-track video {
-  width: 100%;
+.product-image {
+  position: relative;
+  width: 280px; /* 2x plus petit */
   flex-shrink: 0;
-  border-radius: 22px;
 }
 
-.carousel-controls {
+.carousel-img {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+.carousel-btn {
   position: absolute;
   top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   transform: translateY(-50%);
-}
-
-.carousel-controls button {
-  background-color: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.6);
   color: #fff;
   border: none;
-  font-size: 2rem;
-  padding: 6px 14px;
+  font-size: 22px;
+  padding: 6px 12px;
   cursor: pointer;
   border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: -15px;
+}
+
+.carousel-btn.next {
+  right: -15px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
 }

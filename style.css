@@ -279,7 +279,7 @@ p {
 }
 
 .product-card {
-  flex: 0 1 250px; /* carte un peu plus large pour accueillir le bouton */
+  flex: 0 1 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -310,24 +310,30 @@ p {
   font-size: 1.1rem;
 }
 
+/* Bouton "Découvrir" avec design identique au bouton CTA */
 .btn-discover {
   position: absolute;
-  bottom: 10px; /* bouton en bas de la carte */
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 8px 18px;
-  background-color: #f16521; /* couleur Etsy */
+  padding: 10px 20px;
+  background-color: #0071e3; /* même couleur que "Créer mon gnome" */
   color: #fff;
-  font-weight: bold;
-  border-radius: 6px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
   opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none; /* pas cliquable si invisible */
+  transition: opacity 0.3s, background-color 0.3s;
+  pointer-events: none;
 }
 
 .product-card:hover .btn-discover {
   opacity: 1;
-  pointer-events: auto; /* devient cliquable au survol */
+  pointer-events: auto;
+}
+
+.btn-discover:hover {
+  background-color: #005bb5; /* hover identique au bouton CTA */
 }
 
 /* Responsive */
@@ -342,7 +348,6 @@ p {
     flex: 0 1 90%;
   }
 }
-
 /* 🔒 TAILLES IMAGE STABLES */
 .product-card img {
   width: 180px;

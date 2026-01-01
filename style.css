@@ -393,3 +393,44 @@ footer {
     padding: 50px 30px;
   }
 }
+
+/* =================================================
+   CARROUSEL PRODUIT
+================================================= */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.carousel-track img,
+.carousel-track video {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 22px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}

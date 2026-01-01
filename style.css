@@ -482,3 +482,18 @@ footer {
   opacity: 1;
   border-color: #c97c5d;
 }
+
+/* ===== PAGE PRODUIT – MEDIA ===== */
+
+.product-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-media .carousel-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}

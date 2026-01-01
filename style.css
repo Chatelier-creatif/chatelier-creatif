@@ -116,6 +116,31 @@ p {
   transform: translateY(-2px);
 }
 
+/* Bouton découvrir invisible par défaut */
+.product-card .btn-discover {
+  opacity: 0;               /* invisible */
+  pointer-events: none;     /* pas cliquable quand invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* effet smooth */
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background-color: #ff6600; /* couleur Etsy */
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 2;
+}
+
+/* Affiche le bouton seulement au hover de la carte */
+.product-card:hover .btn-discover {
+  opacity: 1;                           /* visible */
+  pointer-events: auto;                 /* cliquable */
+  transform: translateX(-50%) translateY(-5px); /* petit effet de mouvement */
+}
+
 /* =================================================
    TOP BAR
 ================================================= */

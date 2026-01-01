@@ -453,3 +453,32 @@ footer {
 .carousel-btn:hover {
   background: rgba(0,0,0,0.85);
 }
+
+/* ===== MINIATURES CARROUSEL ===== */
+
+.carousel-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.carousel-thumbs img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.carousel-thumbs img:hover {
+  opacity: 0.8;
+}
+
+.carousel-thumbs img.active {
+  opacity: 1;
+  border-color: #c97c5d;
+}

@@ -443,10 +443,18 @@ footer {
 
 /* Conteneur du carrousel */
 .product-image {
-  position: relative; /* nécessaire pour les images absolute */
+  position: relative;
   width: 100%;
-  max-width: 500px; /* largeur max de l'image principale */
-  min-height: 300px; /* garde un ratio correct avant le chargement */
+  max-width: 600px; /* ← ici tu augmentes la largeur max de l'image principale */
+  height: 450px;    /* ← ici tu augmentes la hauteur de l'image principale */
+}
+
+/* Image principale */
+.carousel-img.active {
+  display: block;
+  width: 100%;      /* occupe toute la largeur du conteneur */
+  height: 100%;     /* occupe toute la hauteur */
+  object-fit: cover;
 }
 
 /* Toutes les images du carrousel */

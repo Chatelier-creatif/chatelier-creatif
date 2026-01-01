@@ -443,8 +443,8 @@ footer {
 
 .product-image {
   position: relative;
-  width: 280px;       /* image plus petite */
-  height: 280px;      /* IMPORTANT */
+  width: 320px;       /* image plus petite */
+  height: 320px;      /* IMPORTANT */
   overflow: hidden;
   flex-shrink: 0;
 }

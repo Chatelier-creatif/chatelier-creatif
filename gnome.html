@@ -8,6 +8,72 @@
   <meta name="description" content="Découvrez nos gnomes artisanaux personnalisés, faits main en France. Des créations uniques et décoratives à offrir ou à collectionner." />
 
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Bouton découvrir au hover ===== */
+    .product-card {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .product-card img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Zoom léger au hover */
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .product-card p {
+      margin: 0;
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* Bouton découvrir */
+    .btn-discover {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ff6600; /* couleur Etsy */
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 2;
+    }
+
+    /* Affichage au hover */
+    .product-card:hover .btn-discover {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-5px);
+    }
+
+    /* Grid responsive */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,11 +86,11 @@
         </a>
       </div>
       <div class="social-icons">
-      <a href="https://www.instagram.com/chatelier.creatif/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-      <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
-      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
-    </div>
+        <a href="https://www.instagram.com/chatelier.creatif/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
+      </div>
     </div>
   </div>
 
@@ -59,65 +125,75 @@
     <div class="products-grid">
 
       <!-- PRODUIT -->
-      <a href="gnome-a-personnaliser.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/gnome_a_personnaliser.jpeg" alt="Gnome à personnaliser">
         <h3>Gnome à personnaliser</h3>
-        <p>à partid de 25,00 €</p>
-      </a>
+        <p>à partir de 25,00 €</p>
+        <a href="gnome-a-personnaliser.html" class="btn-discover">Découvrir</a>
+      </div>
       
-      <a href="gnome-abeille.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/gnome_abeille.jpeg" alt="Beely le Gnome Abeille">
         <h3>Beely le Gnome Abeille</h3>
         <p>25,00 €</p>
-      </a>
+        <a href="gnome-abeille.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-artiste.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/gnome_artiste.jpeg" alt="Painty le Gnome Artiste">
         <h3>Painty le Gnome Artiste</h3>
         <p>25,00 €</p>
-      </a>
+        <a href="gnome-artiste.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-epouvantail.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/gnome_epouvantail.jpeg" alt="Strawly le Gnome Epouvantail">
         <h3>Strawly le Gnome Epouvantail</h3>
         <p>25,00 €</p>
-      </a>
+        <a href="gnome-epouvantail.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-pirate.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/gnome_pirate.jpeg" alt="Jolly le Gnome Pirate">
         <h3>Jolly le Gnome Pirate</h3>
         <p>25,00 €</p>
-      </a>
+        <a href="gnome-pirate.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-viking.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/gnome_viking.jpeg" alt="Thoryk le Gnome Viking">
         <h3>Thoryk le Gnome Viking</h3>
         <p>25,00 €</p>
-      </a>
+        <a href="gnome-viking.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-glace.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/glace/gnome_glace.jpeg" alt="Les Gnomes Glace de l'été">
         <h3>Les Gnomes Glace de l'été</h3>
         <p>à partir de 25,00 €</p>
-      </a>
+        <a href="gnome-glace.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-octobre.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/octobre/gnome_roseclair.jpeg" alt="Lumy & Rosie les Gnomes d'Octobre Rose">
         <h3>Lumy & Rosie les Gnomes d'Octobre Rose</h3>
         <p>25,00 €</p>
-      </a>
+        <a href="gnome-octobre.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-harry-potter.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/hp/gnome_gryffondor.jpeg" alt="Thème Harry Potter">
         <h3>Thème Harry Potter</h3>
         <p>à partir de 25,00 €</p>
-      </a>
+        <a href="gnome-harry-potter.html" class="btn-discover">Découvrir</a>
+      </div>
 
-      <a href="gnome-film.html" class="product-card">
+      <div class="product-card">
         <img src="images/gnomes/film/beetlejuice.jpeg" alt="Thème Film/Série TV">
         <h3>Thème Film/Série TV</h3>
         <p>à partir de 25,00 €</p>
-      </a>
+        <a href="gnome-film.html" class="btn-discover">Découvrir</a>
+      </div>
 
     </div>
   </section>

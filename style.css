@@ -310,18 +310,7 @@ p {
   }
 }
 
-/* =================================================
-   CARROUSEL & MINIATURES (FUSIONNÉ)
-================================================= */
-.carousel-img {
-  display: none;
-  width: 100%;
-  border-radius: 16px;
-}
-
-.carousel-img.active {
-  display: block;
-}
+/* ===== MINIATURES CARROUSEL ===== */
 
 .carousel-thumbs {
   display: flex;
@@ -341,7 +330,10 @@ p {
   transition: all 0.25s ease;
 }
 
-.carousel-thumbs img:hover { opacity: 0.8; }
+.carousel-thumbs img:hover {
+  opacity: 0.8;
+}
+
 .carousel-thumbs img.active {
   opacity: 1;
   border-color: #c97c5d;

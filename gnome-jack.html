@@ -102,25 +102,87 @@
         📦 Livraison via Mondial Relay – point relais choisi ensemble après la commande.
       </p>
 
-      <div class="purchase-wrapper">
-        <p class="price">— €</p>
-        <a href="#" class="btn-etsy">Commander sur Etsy</a>
+        <!-- Prix + bouton Etsy côte à côte -->
+        <div class="purchase-wrapper">
+          <p class="price">25,00 €</p>
+          <a href="https://www.etsy.com/fr/listing/4399592505/breizhly-le-gnome-marin-breton?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_10&logging_key=cfdefb7edb18cd19a398ca19ad668c5f46160b31%3A4399592505" target="_blank" class="btn-etsy">
+            Commander sur Etsy
+          </a>
+        </div>
       </div>
+
     </div>
+  </section>
 
+  <!-- CTA -->
+  <section class="cta fade-in">
+    <h2>Envie d’un gnome sur mesure ?</h2>
+    <p>Choisissez un thème, un univers ou un personnage et je créerai votre <strong>gnome personnalisé</strong> fait main, unique et original.</p>
+    <a href="me-contacter.html" class="btn">Créer mon gnome personnalisé</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">×</span>
+    <img class="lightbox-img" src="" alt="">
   </div>
-</section>
 
-<!-- CTA -->
-<section class="cta fade-in">
-  <h2>Envie d’un gnome inspiré de votre univers préféré ?</h2>
-  <p>Je crée votre <strong>gnome personnalisé</strong> fait main, unique et chargé d’émotion.</p>
-  <a href="me-contacter.html" class="btn">Créer mon gnome</a>
-</section>
+  <!-- SCRIPT GLOBAL -->
+  <script>
+    // ===== Animation scroll =====
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fade => observer.observe(fade));
 
-<footer>
-  <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
-</footer>
+    // ===== Carrousel produit =====
+    const images = document.querySelectorAll('.carousel-img');
+    const thumbs = document.querySelectorAll('.thumb');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach(img => img.classList.remove('active'));
+      thumbs.forEach(thumb => thumb.classList.remove('active'));
+      images[index].classList.add('active');
+      thumbs[index].classList.add('active');
+      currentIndex = index;
+    }
+
+    prevBtn.addEventListener('click', () => showImage((currentIndex - 1 + images.length) % images.length));
+    nextBtn.addEventListener('click', () => showImage((currentIndex + 1) % images.length));
+    thumbs.forEach(thumb => thumb.addEventListener('click', () => showImage(parseInt(thumb.dataset.index))));
+
+    // ===== Lightbox =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) lightbox.style.display = 'none';
+    });
+  </script>
 
 </body>
 </html>

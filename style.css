@@ -310,6 +310,104 @@ p {
   }
 }
 
+/* ===== CARROUSEL PRODUIT ===== */
+
+.product-detail {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Conteneur du carrousel */
+.product-image {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* augmente la largeur max de l'image principale */
+  margin: 0 auto; /* centrer */
+}
+
+/* Toutes les images du carrousel */
+.carousel-img {
+  display: none;
+  border-radius: 16px;
+  width: 100%;
+  height: auto; /* laisse la hauteur se calculer automatiquement */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Image principale active */
+.carousel-img.active {
+  display: block;
+}
+
+/* Thumbnails */
+.carousel-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.carousel-thumbs img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.carousel-thumbs img:hover {
+  transform: scale(1.05);
+}
+
+/* Boutons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s;
+}
+
+.carousel-btn.prev {
+  left: 8px;
+}
+
+.carousel-btn.next {
+  right: 8px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-image {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .product-image {
+    width: 100%;
+  }
+}
+
 /* ===== MINIATURES CARROUSEL ===== */
 
 .carousel-thumbs {

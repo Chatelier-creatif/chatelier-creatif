@@ -2,77 +2,127 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Banderole personnalisée | Derrière Le Cha’Telier Créatif</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Banderoles personnalisées – Le Cha'Telier Créatif</title>
+  <meta name="description" content="Découvrez nos banderoles personnalisées faites main. Prénoms, messages, événements : une décoration unique pour chaque occasion.">
 
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Derrière Le Cha’Telier Créatif">
-    </a>
-
-    <nav class="main-nav">
-      <a href="index.html">Accueil</a>
-      <a href="creations.html">Créations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <!-- ===== CONTENU PRODUIT ===== -->
-  <main class="product-page">
-
-    <section class="product-container">
-
-      <!-- Image produit -->
-      <div class="product-image">
-        <img src="images/banderole.jpg" alt="Banderole personnalisée">
-      </div>
-
-      <!-- Infos produit -->
-      <div class="product-details">
-        <h1>Banderole personnalisée</h1>
-
-        <p class="product-description">
-          Une banderole entièrement personnalisable, idéale pour célébrer
-          un anniversaire, une naissance ou un événement unique.
-          Chaque création est réalisée à la main avec soin dans mon atelier.
-        </p>
-
-        <ul class="product-features">
-          <li>✔ Personnalisation du texte</li>
-          <li>✔ Choix des couleurs</li>
-          <li>✔ Fabrication artisanale</li>
-          <li>✔ Décoration réutilisable</li>
-        </ul>
-
-        <a href="contact.html" class="btn-discover">
-          Commander une banderole
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo_rond.png" alt="Logo Le Cha'Telier Créatif">
         </a>
       </div>
 
-    </section>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/chatelier.creatif/" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank" rel="noopener noreferrer">
+          <img src="images/pinterest.png" alt="Pinterest">
+        </a>
+        <a href="#">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank" rel="noopener noreferrer">
+          <img src="images/etsy.png" alt="Etsy">
+        </a>
+      </div>
+    </div>
+  </div>
 
-    <!-- ===== SECTION TEXTE COMPLÉMENTAIRE ===== -->
-    <section class="product-extra">
-      <h2>Une création sur mesure</h2>
-      <p>
-        Chaque banderole est pensée pour s’intégrer parfaitement à votre
-        décoration. Les matières, les couleurs et le message sont adaptés
-        selon vos envies pour un rendu unique et chaleureux.
-      </p>
-    </section>
+  <!-- NAV -->
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li>
 
-  </main>
+      <li class="dropdown">
+        <a href="creations.html">Mes créations ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="gnome.html">Gnomes personnalisés</a></li>
+          <li><a href="box.html">Box personnalisées</a></li>
+          <li><a href="banderole.html">Banderoles personnalisées</a></li>
+          <li><a href="pochon.html">Pochons personnalisés</a></li>
+        </ul>
+      </li>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <p>© Derrière Le Cha’Telier Créatif – Créations artisanales</p>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="me-contacter.html">Me contacter</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content fade-in">
+      <h1>Les banderoles personnalisées</h1>
+      <p>Des banderoles décoratives faites main pour célébrer chaque moment important avec douceur et créativité.</p>
+    </div>
+  </header>
+
+  <!-- PRODUITS -->
+  <section class="section fade-in">
+    <div class="products-grid">
+
+      <a href="banderole-a-personnaliser.html" class="product-card">
+        <img src="images/banderoles/banderole_personnalisee.jpeg" alt="Banderole personnalisable">
+        <h3>Banderole à personnaliser</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
+
+      <a href="banderole-naissance.html" class="product-card">
+        <img src="images/banderoles/banderole_naissance.jpeg" alt="Banderole naissance">
+        <h3>Banderole naissance</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
+
+      <a href="banderole-anniversaire.html" class="product-card">
+        <img src="images/banderoles/banderole_anniversaire.jpeg" alt="Banderole anniversaire">
+        <h3>Banderole anniversaire</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
+
+      <a href="banderole-noel.html" class="product-card">
+        <img src="images/banderoles/banderole_noel.jpeg" alt="Banderole de Noël">
+        <h3>Banderole de Noël</h3>
+        <span class="btn-discover">Découvrir</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta fade-in">
+    <h2>Une banderole à votre image</h2>
+    <p>Prénom, message, couleurs… chaque banderole est créée sur mesure selon vos envies.</p>
+    <a href="me-contacter.html" class="btn">Créer ma banderole</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
   </footer>
+
+  <!-- ANIMATION SCROLL -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

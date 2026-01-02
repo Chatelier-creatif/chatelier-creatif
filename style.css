@@ -66,6 +66,14 @@ p {
   box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
+.purchase-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* espace entre le prix et le bouton */
+  margin-top: 20px;
+  flex-wrap: wrap; /* responsive mobile */
+}
+
 .price {
   font-size: 24px; /* plus grand pour attirer l’œil */
   font-weight: 700;

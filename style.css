@@ -354,10 +354,11 @@ p {
 
 /* Thumbnails */
 .carousel-thumbs {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 6px;
+  max-height: 120px; /* limite stricte */
+  overflow: hidden;
 }
 
 .carousel-thumbs img {

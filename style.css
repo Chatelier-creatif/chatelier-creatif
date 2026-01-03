@@ -321,47 +321,70 @@ p {
   }
 }
 
-/* ===== CARROUSEL PRODUIT – image gauche / texte droite ===== */
-
+/* ===== CARROUSEL PRODUIT ===== */
 .product-detail {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  flex-wrap: wrap; /* pour mobile */
+  flex-wrap: wrap; /* permet de s'adapter aux petits écrans */
 }
 
+/* Conteneur du carrousel */
 .product-image {
-  display: flex;
-  flex-direction: column; /* image principale + vignettes en dessous */
+  position: relative;
   width: 100%;
-  max-width: 450px; /* limite la taille totale du bloc image */
-  cursor: pointer;
+  max-width: 500px; /* largeur de l'image principale */
+  margin: 0 auto;
 }
 
-/* Image principale */
+/* Toutes les images du carrousel */
 .carousel-img {
   display: none;
+  border-radius: 16px;
   width: 100%;
   height: auto;
-  border-radius: 16px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  cursor: pointer; /* clic pour lightbox */
 }
 
+/* Image principale active */
 .carousel-img.active {
   display: block;
 }
 
-/* Conteneur vignettes scrollable */
+/* Boutons précédent / suivant */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px; /* proche du bord gauche de l'image */
+}
+
+.carousel-btn.next {
+  right: 10px; /* proche du bord droit de l'image */
+}
+
+/* Miniatures scrollables */
 .carousel-thumbs-wrapper {
-  overflow-x: auto; /* scroll horizontal si trop de vignettes */
-  padding-top: 12px;
+  overflow-x: auto;
+  margin-top: 12px;
 }
 
 .carousel-thumbs {
   display: flex;
   gap: 8px;
-  flex-wrap: nowrap; /* toutes les miniatures sur une ligne */
+  padding-bottom: 6px;
 }
 
 .carousel-thumbs::-webkit-scrollbar {
@@ -378,7 +401,7 @@ p {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -391,24 +414,7 @@ p {
 
 .thumb.active {
   opacity: 1;
-  outline: 2px solid #c97c5d;
-}
-
-/* Texte à droite de l'image */
-.product-info {
-  flex: 1; /* prend le reste de l'espace */
-  max-width: 550px;
-}
-
-/* Responsive : image au-dessus du texte sur mobile */
-@media (max-width: 768px) {
-  .product-detail {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .product-image { max-width: 90%; }
-  .carousel-thumbs-wrapper { max-width: 90%; }
-  .thumb { width: 50px; height: 50px; }
+  outline: 2px solid #c3b6a5;
 }
 /* Boutons */
 .carousel-btn {

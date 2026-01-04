@@ -4,119 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Me contacter – Le Cha'Telier Créatif</title>
-  <meta name="description" content="Contactez Le Cha'Telier Créatif pour toute demande de création artisanale personnalisée. Réponse rapide et échange sur mesure." />
+  <title>Me contacter – Le Cha'Telier Créatif | Création artisanale personnalisée</title>
+  <meta name="description" content="Contactez Le Cha'Telier Créatif pour une création artisanale personnalisée. Échange simple, réponse rapide et projet sur mesure fait main en France." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Bandeau supérieur -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo_rond.png" alt="Le Cha'Telier Créatif" />
-        </a>
-      </div>
-      <div class="social-icons">
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo_rond.png" alt="Le Cha'Telier Créatif" />
+      </a>
+    </div>
+    <div class="social-icons">
       <a href="https://www.instagram.com/chatelier.creatif/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
       <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
       <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
       <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
     </div>
-    </div>
   </div>
+</div>
 
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <li><a href="index.html">Accueil</a></li>
-      <li class="dropdown">
-        <a href="creations.html">Mes créations ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="gnome.html">Gnomes personnalisés</a></li>
-          <li><a href="box.html">Box personnalisées</a></li>
-          <li><a href="banderole.html">Banderoles personnalisées</a></li>
-          <li><a href="pochon.html">Pochons personnalisés</a></li>
-        </ul>
-      </li>
-      <li><a href="a-propos.html">À propos du Cha'Telier</a></li>
-      <li><a href="me-contacter.html">Me contacter</a></li>
-    </ul>
-  </nav>
+<!-- NAV -->
+<nav class="main-nav">
+  <ul class="nav-list">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="dropdown">
+      <a href="creations.html">Mes créations ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="gnome.html">Gnomes personnalisés</a></li>
+        <li><a href="box.html">Box personnalisées</a></li>
+        <li><a href="banderole.html">Banderoles personnalisées</a></li>
+        <li><a href="pochon.html">Pochons personnalisés</a></li>
+      </ul>
+    </li>
+    <li><a href="a-propos.html">À propos du Cha'Telier</a></li>
+    <li><a href="me-contacter.html" class="active">Me contacter</a></li>
+  </ul>
+</nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Me contacter</h1>
-      <p>Une question, une idée, un projet personnalisé ? Parlons-en.</p>
-    </div>
-  </header>
-
-  <!-- FORMULAIRE -->
-  <section class="section">
-    <h2>Discutons de votre création</h2>
-    <p class="intro">
-      Chaque projet est unique. Prenez quelques instants pour m’expliquer votre besoin,
-      je vous répondrai rapidement.
-    </p>
-
-    <form class="contact-form" action="mailto:contact@lechateliercreatif.fr" method="post" enctype="text/plain" onsubmit="showConfirmation()">
-
-      <div class="form-group">
-        <label for="name">Nom / Prénom</label>
-        <input type="text" id="name" name="Nom" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Adresse email</label>
-        <input type="email" id="email" name="Email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="subject">Type de demande</label>
-        <select id="subject" name="Sujet">
-          <option>Création personnalisée</option>
-          <option>Commande en cours</option>
-          <option>Demande d'information</option>
-          <option>Autre</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Votre message</label>
-        <textarea id="message" name="Message" rows="6" required></textarea>
-      </div>
-
-      <button type="submit" class="btn">Envoyer le message</button>
-
-      <p id="confirmation-message" style="display:none; margin-top:25px; font-weight:600; color:#3b3b3b;">
-        ✨ Merci pour votre message ! Je reviens vers vous très rapidement.
-      </p>
-
-    </form>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Création 100 % sur mesure</h2>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content fade-in">
+    <h1>Parlons de votre projet</h1>
     <p>
-      Du premier échange à la réalisation finale, chaque création est pensée
-      avec attention et passion.
+      Une idée, une envie, une création à imaginer ensemble ?  
+      Je vous accompagne pour donner vie à une <strong>création artisanale unique</strong>, faite main avec soin.
     </p>
-  </section>
+  </div>
+</header>
 
-  <!-- Footer -->
-  <footer>
-    <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
-  </footer>
+<!-- INTRO -->
+<section class="section fade-in">
+  <h2>Comment ça se passe ?</h2>
+  <p class="intro">
+    Rien de compliqué : vous me parlez de votre idée, je vous réponds rapidement
+    et nous construisons ensemble une création qui vous ressemble.
+  </p>
 
-  <script>
-    function showConfirmation() {
-      document.getElementById('confirmation-message').style.display = 'block';
-    }
-  </script>
+  <ul class="values-list">
+    <li>💬 Échange simple et bienveillant</li>
+    <li>✏️ Création 100 % personnalisée</li>
+    <li>🖐️ Fabrication artisanale faite main</li>
+    <li>📦 Livraison soignée</li>
+  </ul>
+</section>
+
+<!-- FORMULAIRE -->
+<section class="section fade-in">
+  <h2>Me contacter</h2>
+
+  <form class="contact-form" action="mailto:contact@lechateliercreatif.fr" method="post" enctype="text/plain" onsubmit="showConfirmation()">
+
+    <div class="form-group">
+      <label for="name">Nom / Prénom</label>
+      <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Adresse email</label>
+      <input type="email" id="email" name="Email" placeholder="votre@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Votre demande concerne :</label>
+      <select id="subject" name="Sujet">
+        <option>Création personnalisée</option>
+        <option>Commande en cours</option>
+        <option>Demande d'information</option>
+        <option>Autre</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Parlez-moi de votre projet</label>
+      <textarea id="message" name="Message" rows="6" placeholder="Thème, prénom, couleurs, date souhaitée…" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Envoyer ma demande</button>
+
+    <p id="confirmation-message" style="display:none; margin-top:25px; font-weight:600; text-align:center;">
+      ✨ Merci pour votre message !  
+      Je vous répondrai très rapidement pour échanger sur votre projet.
+    </p>
+
+  </form>
+</section>
+
+<!-- CTA -->
+<section class="cta fade-in">
+  <h2>Chaque création raconte une histoire</h2>
+  <p>
+    Ici, pas de production standardisée.  
+    Chaque pièce est imaginée avec le cœur pour créer une émotion et un souvenir durable.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
+</footer>
+
+<script>
+  function showConfirmation() {
+    document.getElementById('confirmation-message').style.display = 'block';
+  }
+</script>
 
 </body>
 </html>

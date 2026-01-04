@@ -115,24 +115,32 @@
 </section>
 
 <!-- CTA -->
-<section class="cta fade-in">
-  <h2>Chaque création raconte une histoire</h2>
-  <p>
-    Ici, pas de production standardisée.  
-    Chaque pièce est imaginée avec le cœur pour créer une émotion et un souvenir durable.
-  </p>
-</section>
+  <section class="cta fade-in">
+    <h2>Créer une box sur mesure</h2>
+    <p>Choisissez le thème, les couleurs et les créations pour composer un coffret unique.</p>
+    <a href="me-contacter.html" class="btn">Créer ma box</a>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
+  </footer>
 
-<script>
-  function showConfirmation() {
-    document.getElementById('confirmation-message').style.display = 'block';
-  }
-</script>
+  <!-- ANIMATION SCROLL -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

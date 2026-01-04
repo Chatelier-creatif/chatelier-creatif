@@ -545,12 +545,27 @@ p {
 /* =================================================
    A PROPOS DE CHA
 ================================================= */
-.about-layout {
+/* ===== LAYOUT A PROPOS ===== */
+
+.two-columns {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 60px;
   align-items: center;
 }
+
+@media (max-width: 900px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image {
+    order: -1;
+  }
+}
+
+/* ===== IMAGE ATELIER ===== */
 
 .about-image img {
   width: 100%;
@@ -559,23 +574,19 @@ p {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* ===== TEXTE ===== */
+
 .about-text h2 {
   font-size: 2rem;
-  margin-bottom: 8px;
-}
-
-.about-text h4 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #8a6d5a;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .about-text p {
   line-height: 1.7;
   margin-bottom: 18px;
-  color: #333;
 }
+
+/* ===== VALEURS ===== */
 
 .values-list {
   list-style: none;
@@ -586,53 +597,6 @@ p {
 .values-list li {
   margin-bottom: 10px;
   font-size: 0.95rem;
-}
-
-@media (max-width: 900px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about-image {
-    order: -1;
-  }
-}
-
-.quote-section {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #f7f2ee;
-  margin: 80px 0;
-}
-
-.quote-section blockquote {
-  font-size: 1.4rem;
-  font-style: italic;
-  color: #5a4638;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.quote-section blockquote::before,
-.quote-section blockquote::after {
-  content: "“";
-  font-size: 4rem;
-  color: #d2b49c;
-  position: absolute;
-  opacity: 0.4;
-}
-
-.quote-section blockquote::before {
-  top: -20px;
-  left: -30px;
-}
-
-.quote-section blockquote::after {
-  content: "”";
-  bottom: -40px;
-  right: -30px;
 }
 
 /* ===== CITATION ATELIER ===== */

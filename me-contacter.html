@@ -75,36 +75,57 @@
 
 <!-- FORMULAIRE -->
 <section class="section fade-in">
-  <h2>Me contacter</h2>
+  <h2>Parlons de votre création</h2>
+  <p class="intro">
+    Décrivez-moi votre idée, même brièvement.  
+    Je vous réponds rapidement pour affiner ensemble votre projet personnalisé.
+  </p>
 
-  <form class="contact-form" action="mailto:contact@lechateliercreatif.fr" method="post" enctype="text/plain" onsubmit="showConfirmation()">
+  <form class="contact-form premium" action="mailto:contact@lechateliercreatif.fr" method="post" enctype="text/plain" onsubmit="showConfirmation()">
 
-    <div class="form-group">
-      <label for="name">Nom / Prénom</label>
-      <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label for="name">Nom / Prénom *</label>
+        <input type="text" id="name" name="Nom" placeholder="Ex : Sophie Martin" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse email *</label>
+        <input type="email" id="email" name="Email" placeholder="exemple@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Type de demande</label>
+        <select id="subject" name="Sujet">
+          <option>Création personnalisée</option>
+          <option>Box anniversaire</option>
+          <option>Banderole ou décoration</option>
+          <option>Commande en cours</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date de l’événement (si applicable)</label>
+        <input type="text" id="date" name="Date" placeholder="Ex : 15 juin 2026">
+      </div>
+
     </div>
 
-    <div class="form-group">
-      <label for="email">Adresse email</label>
-      <input type="email" id="email" name="Email" placeholder="votre@email.com" required>
+    <div class="form-group full">
+      <label for="message">Votre message *</label>
+      <textarea id="message" name="Message" rows="6" placeholder="Thème, prénom, couleurs souhaitées, quantité, délais…" required></textarea>
     </div>
 
-    <div class="form-group">
-      <label for="subject">Votre demande concerne :</label>
-      <select id="subject" name="Sujet">
-        <option>Création personnalisée</option>
-        <option>Commande en cours</option>
-        <option>Demande d'information</option>
-        <option>Autre</option>
-      </select>
-    </div>
+    <div class="form-footer">
+      <p class="form-note">
+        💛 Chaque message est lu avec attention.  
+        Réponse sous 24 à 48h (hors week-end).
+      </p>
 
-    <div class="form-group">
-      <label for="message">Parlez-moi de votre projet</label>
-      <textarea id="message" name="Message" rows="6" placeholder="Thème, prénom, couleurs, date souhaitée…" required></textarea>
-    </div>
-
-    <button type="submit" class="btn">Envoyer ma demande</button>
+      <button type="submit" class="btn btn-large">
+        Env
 
     <p id="confirmation-message" style="display:none; margin-top:25px; font-weight:600; text-align:center;">
       ✨ Merci pour votre message !  

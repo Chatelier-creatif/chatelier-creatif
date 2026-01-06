@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Box personnalisée sur mesure – Créez votre box à thème | Le Cha'Telier Créatif</title>
+  <meta name="description" content="Imaginez votre box personnalisée autour du thème de votre choix. Anniversaire, naissance, fête à thème : une box artisanale unique, faite main en France." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo_rond.png" alt="Le Cha'Telier Créatif">
+      </a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/chatelier.creatif/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://fr.pinterest.com/lechateliercreatif/" target="_blank"><img src="images/pinterest.png" alt="Pinterest"></a>
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://www.etsy.com/fr/shop/LeChaTelierCreatif" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <ul class="nav-list">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="dropdown">
+      <a href="creations.html">Mes créations ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="gnome.html">Gnomes personnalisés</a></li>
+        <li><a href="box-personnalise.html">Box personnalisées</a></li>
+        <li><a href="banderole.html">Banderoles personnalisées</a></li>
+        <li><a href="pochon.html">Pochons personnalisés</a></li>
+      </ul>
+    </li>
+    <li><a href="a-propos.html">À propos du Cha'Telier</a></li>
+    <li><a href="me-contacter.html">Me contacter</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content fade-in">
+    <h1>Box personnalisée sur mesure</h1>
+    <p>
+      Créez une <strong>box personnalisée unique</strong> autour du thème de votre choix : anniversaire, naissance, fête à thème ou simple attention.
+      Une box imaginée avec vous, <strong>fabriquée à la main en France</strong>, pour un effet waouh garanti.
+    </p>
+  </div>
+</header>
+
+<!-- PRODUIT -->
+<section class="section fade-in">
+  <div class="product-detail">
+
+    <!-- Visuels -->
+    <div class="product-media">
+      <div class="product-image">
+        <img src="images/box/box_personnalisee_1.jpeg" alt="Box personnalisée faite main">
+      </div>
+    </div>
+
+    <!-- Infos produit -->
+    <div class="product-info">
+      <h2>Une box qui vous ressemble</h2>
+
+      <p>
+        🎁 La <strong>box personnalisée</strong> est pensée comme une expérience complète : chaque élément est choisi avec soin pour correspondre parfaitement à votre thème, vos couleurs et votre message.
+      </p>
+
+      <p>
+        Que ce soit pour un enfant, un adulte, une occasion spéciale ou simplement pour faire plaisir, je vous accompagne dans la création d’une box cohérente, harmonieuse et 100 % personnalisée.
+      </p>
+
+      <p>
+        Chaque box est <strong>entièrement réalisée à la main</strong>, en petite série ou pièce unique, avec des créations artisanales qui font la différence.
+      </p>
+
+      <h3 class="product-info-title">La box peut contenir :</h3>
+      <ul>
+        <li>Décorations personnalisées (banderole, affiche, accessoires…)</li>
+        <li>Objets textiles ou papier personnalisés</li>
+        <li>Créations adaptées à votre thème (couleurs, univers, âge)</li>
+        <li>Message ou prénom personnalisé</li>
+        <li>Packaging soigné, prêt à offrir</li>
+      </ul>
+
+      <p>
+        💬 Après votre demande, nous échangeons ensemble afin de définir votre thème, votre budget et vos envies pour créer une <strong>box sur mesure</strong>, unique et mémorable.
+      </p>
+
+      <p>
+        📦 Livraison par Mondial Relay. Je vous contacte après validation pour finaliser l’envoi.
+      </p>
+
+      <div class="purchase-wrapper">
+        <p class="price">Tarif sur devis</p>
+        <a href="me-contacter.html" class="btn-etsy">
+          Créer ma box personnalisée
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta fade-in">
+  <h2>Une idée précise ou juste une inspiration ?</h2>
+  <p>
+    Dites-moi le thème, l’occasion et l’univers souhaité : je m’occupe de transformer votre idée en <strong>box personnalisée artisanale</strong>.
+  </p>
+  <a href="me-contacter.html" class="btn">Lancer ma box sur mesure</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Le Cha'Telier Créatif – Créations artisanales personnalisées faites main en France.</p>
+</footer>
+
+<!-- SCRIPT GLOBAL -->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  faders.forEach(fade => observer.observe(fade));
+</script>
+
+</body>
+</html>

@@ -534,7 +534,7 @@ p {
   justify-content: center;
 }
 
-.about-image img {
+.about-image > img {
   border-radius: 50px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   width: 100%;

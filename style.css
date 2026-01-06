@@ -524,11 +524,30 @@ p {
   align-items: center;
 }
 
+.two-images {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .two-images img {
-  width: 100%;
-  max-width: 100%;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.two-images img {
+  flex: 1;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .two-images {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-images {
+    flex-direction: column;
+  }
 }
 
 /* =================================================

@@ -227,6 +227,36 @@ p {
 }
 
 /* =================================================
+   Page Index
+================================================= */
+
+.about-home {
+  display: flex;
+  align-items: center;
+  gap: 50px;          /* espace entre texte et image */
+  flex-direction: row; /* texte à gauche, image à droite */
+}
+
+.about-text {
+  flex: 1;             /* prend l’espace disponible pour le texte */
+}
+
+.about-image {
+  flex: 1;             /* prend l’espace disponible pour l’image */
+  display: flex;
+  justify-content: flex-end; /* force l’image à coller à droite */
+}
+
+.about-image img {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;       /* ajuste automatiquement selon la largeur du conteneur */
+  max-width: 400px;  /* limite la taille de l’image */
+  height: auto;
+  display: block;
+}
+
+/* =================================================
    PRODUITS
 ================================================= */
 .products-grid {

@@ -727,6 +727,22 @@ p {
 }
 
 /* =================================================
+   ME CONTACTER
+================================================= */
+
+.page-contact p {
+  margin-bottom: 10px;  /* réduit l'espace par défaut entre paragraphes */
+  line-height: 1.4;     /* plus compact que le line-height classique */
+}
+
+.page-contact h1,
+.page-contact h2,
+.page-contact h3,
+.page-contact h4 {
+  margin-bottom: 12px;  /* espace réduit après les titres */
+}
+
+/* =================================================
    CTA
 ================================================= */
 .cta {

@@ -742,6 +742,17 @@ p {
   margin-bottom: 6px;  /* espace réduit après les titres */
 }
 
+.contact-form {
+  max-width: 800px;   /* largeur confortable */
+  margin: 0 auto;     /* le vrai centrage */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* =================================================
    CTA
 ================================================= */

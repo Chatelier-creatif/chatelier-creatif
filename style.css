@@ -743,10 +743,35 @@ p {
 }
 
 .contact-form {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px;
+  max-width: 700px;      /* largeur confortable */
+  margin: 0 auto;        /* centrage horizontal */
+}
+
+.contact-or {
+  margin: 15px 0;        /* espace au-dessus et en dessous */
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.contact-or + .contact-form {
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group.full {
+  margin-top: 10px;
+}
+
+.contact-section h1,
+.contact-section p,
+.section h2,
+.section .intro {
+  text-align: center;
 }
 
 /* =================================================

@@ -743,14 +743,10 @@ p {
 }
 
 .contact-form {
-  max-width: 800px;   /* largeur confortable */
-  margin: 0 auto;     /* le vrai centrage */
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
 }
 
 /* =================================================

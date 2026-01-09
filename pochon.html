@@ -122,5 +122,16 @@
     faders.forEach(el => observer.observe(el));
   </script>
 
+
+  <div id="site-footer"></div>
+
+<script>
+  fetch('partials/header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('site-header').innerHTML = data;
+    });
+</script>
+  
 </body>
 </html>

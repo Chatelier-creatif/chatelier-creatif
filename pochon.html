@@ -79,21 +79,24 @@
     faders.forEach(el => observer.observe(el));
   </script>
   
-<script>
-  
-  const loadPartial = (id, file) => {
-  fetch(file)
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById(id).innerHTML = html;
-    });
-};
+document.addEventListener('DOMContentLoaded', () => {
 
-loadPartial('site-header', 'partial/header.html');
-loadPartial('site-nav', 'partial/nav.html');
-loadPartial('site-cta', 'partial/cta.html');
-loadPartial('site-footer', 'partial/footer.html');
-</script>
+  const loadPartial = (id, file) => {
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = html;
+      })
+      .catch(err => console.error(`Erreur ${file}`, err));
+  };
+
+  loadPartial('site-header', 'partial/header.html');
+  loadPartial('site-nav', 'partial/nav.html');
+  loadPartial('site-cta', 'partial/cta.html');
+  loadPartial('site-footer', 'partial/footer.html');
+
+});
   
 </body>
 </html>

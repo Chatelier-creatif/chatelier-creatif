@@ -79,26 +79,36 @@
     faders.forEach(el => observer.observe(el));
   </script>
 
-  <script>
+  // js/partials.js
+
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Base path pour GitHub Pages
+  // Si ton repo s'appelle "lechatelier-creatif", ajoute '/lechatelier-creatif/' sinon juste '/' si racine
+  const basePath = '/lechatelier-creatif/';
+
+  // Fonction pour charger un partial
   const loadPartial = (id, file) => {
-    fetch(file)
-      .then(res => res.text())
+    fetch(basePath + file)
+      .then(res => {
+        if (!res.ok) throw new Error(`Erreur HTTP: ${res.status}`);
+        return res.text();
+      })
       .then(html => {
         const el = document.getElementById(id);
         if (el) el.innerHTML = html;
       })
-      .catch(err => console.error(`Erreur ${file}`, err));
+      .catch(err => console.error(`Erreur lors du chargement de ${file}:`, err));
   };
 
+  // Charger tous les partials
   loadPartial('site-header', 'partial/header.html');
   loadPartial('site-nav', 'partial/nav.html');
+  loadPartial('site-hero', 'partial/hero-pochon.html'); // si tu veux utiliser un hero partial
   loadPartial('site-cta', 'partial/cta.html');
   loadPartial('site-footer', 'partial/footer.html');
 
 });
-  </script>
   
 </body>
 </html>

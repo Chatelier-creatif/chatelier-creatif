@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Host       = 'smtp-fr.securemail.pro';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'contact@lechatelier-creatif.fr';
-        $mail->Password   = 'cucqut-tuhby8'; // mot de passe mail
+        $mail->Password   = 'XXXX'; // mot de passe mail
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 

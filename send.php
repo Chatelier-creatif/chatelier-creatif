@@ -12,6 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email   = htmlspecialchars($_POST['email']);
     $message = nl2br(htmlspecialchars($_POST['message']));
 
+    $subject = htmlspecialchars($_POST['subject'] ?? '');
+    $date    = htmlspecialchars($_POST['event_date'] ?? '');
+
     $mail = new PHPMailer(true);
 
     try {
@@ -43,3 +46,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Erreur d'envoi : {$mail->ErrorInfo}";
     }
 }
+

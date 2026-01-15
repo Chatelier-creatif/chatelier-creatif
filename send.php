@@ -8,12 +8,16 @@ require 'PHPMailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    // Sécurité basique
+    if (!empty($_POST['website'])) {
+        exit(); // anti-spam
+    }
+
     $name    = htmlspecialchars($_POST['name']);
     $email   = htmlspecialchars($_POST['email']);
     $message = nl2br(htmlspecialchars($_POST['message']));
-
-    $subject = htmlspecialchars($_POST['subject'] ?? '');
-    $date    = htmlspecialchars($_POST['event_date'] ?? '');
+    $subject = htmlspecialchars($_POST['subject'] ?? 'Non précisé');
+    $date    = htmlspecialchars($_POST['event_date'] ?? 'Non précisée');
 
     $mail = new PHPMailer(true);
 
@@ -22,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Host       = 'smtp-fr.securemail.pro';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'contact@lechatelier-creatif.fr';
-        $mail->Password   = 'XXXX'; // mot de passe mail
+        $mail->Password   = 'XXXX';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
@@ -31,10 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->addReplyTo($email, $name);
 
         $mail->isHTML(true);
-        $mail->Subject = "Nouveau message depuis le site";
-        $mail->Body    = "
+        $mail->Subject = "Nouveau message – Site Le Cha'Telier Créatif";
+        $mail->Body = "
             <strong>Nom :</strong> {$name}<br>
-            <strong>Email :</strong> {$email}<br><br>
+            <strong>Email :</strong> {$email}<br>
+            <strong>Type de demande :</strong> {$subject}<br>
+            <strong>Date de l’événement :</strong> {$date}<br><br>
             <strong>Message :</strong><br>{$message}
         ";
 
@@ -46,4 +52,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Erreur d'envoi : {$mail->ErrorInfo}";
     }
 }
-

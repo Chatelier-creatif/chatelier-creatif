@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Merci pour votre message – Le Cha'Telier Créatif</title>
+  <meta name="description" content="Merci pour votre message. Le Cha'Telier Créatif vous répondra très rapidement pour échanger sur votre projet personnalisé.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles principaux -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Optionnel : petite animation douce -->
+  <style>
+    .merci-container {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .merci-box {
+      max-width: 700px;
+      background: #f7f3ed;
+      padding: 50px 35px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      animation: fadeIn 0.8s ease;
+    }
+
+    .merci-box h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .merci-box p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .merci-actions {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER (si tu en as un, sinon tu peux supprimer cette partie) -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      Le Cha'Telier Créatif
+    </a>
+  </header>
+
+  <!-- CONTENU -->
+  <main class="merci-container">
+    <div class="merci-box">
+      <h1>✨ Merci pour votre message</h1>
+
+      <p>
+        Votre demande a bien été envoyée 💛  
+        Je la lis avec attention et je reviens vers vous très rapidement  
+        pour échanger sur votre projet et affiner votre création personnalisée.
+      </p>
+
+      <p>
+        En attendant, vous pouvez découvrir mes créations  
+        ou me retrouver sur les réseaux.
+      </p>
+
+      <div class="merci-actions">
+        <a href="creations.html" class="btn btn-large">
+          Découvrir les créations
+        </a>
+
+        <a href="index.html" class="btn btn-outline">
+          Retour à l’accueil
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (si tu en as un) -->
+  <footer class="site-footer">
+    <p>
+      © Le Cha'Telier Créatif – Créations personnalisées faites avec amour
+    </p>
+  </footer>
+
+</body>
+</html>

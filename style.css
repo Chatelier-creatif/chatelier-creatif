@@ -97,23 +97,48 @@ p {
   transform: translateY(-2px);
 }
 
-.pinterest-cta {
-  text-align: center;
-  margin: 40px 0;
+.purchase-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
 }
 
-.pinterest-cta a {
-  display: inline-block;
-  padding: 14px 28px;
-  background-color: #c6a77d; /* beige / doré doux */
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+/* Bouton Etsy (principal) */
+.btn-etsy {
+  background-color: #000000;
   color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 30px;
   transition: all 0.3s ease;
 }
 
-.pinterest-cta a:hover {
+.btn-etsy:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+/* Bouton Pinterest (secondaire) */
+.btn-pinterest {
+  background-color: #c6a77d;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-pinterest:hover {
   background-color: #b09168;
   transform: translateY(-2px);
 }

@@ -115,6 +115,11 @@ p {
   margin-right: 10px;
 }
 
+.btn-etsy,
+.btn-pinterest {
+  flex-shrink: 0;         /* 🔑 empêche l’écrasement */
+}
+
 /* Bouton Etsy (principal) */
 .btn-etsy {
   background-color: #F1641E; /* Orange Etsy */

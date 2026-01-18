@@ -69,9 +69,9 @@ p {
 .purchase-wrapper {
   display: flex;
   align-items: center;
-  gap: 20px; /* espace entre le prix et le bouton */
-  margin-top: 20px;
-  flex-wrap: wrap; /* responsive mobile */
+  gap: 16px;
+  margin-top: 25px;
+  flex-wrap: nowrap; /* 🔑 empêche le passage à la ligne */
 }
 
 .price {
@@ -95,14 +95,6 @@ p {
 .btn-etsy:hover {
   background-color: #d35400;
   transform: translateY(-2px);
-}
-
-.purchase-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 25px;
 }
 
 .price {
@@ -542,6 +534,12 @@ p {
   }
   .product-image {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .purchase-wrapper {
+    flex-wrap: wrap;
   }
 }
 
